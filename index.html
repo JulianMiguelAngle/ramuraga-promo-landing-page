@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ramuraga Promo Landing Page</title>
+  </head>
+  
+  <body>
+    <div id="app">
+      <section class="hero-section">
+        <article class="heading-description-wrapper">
+          <h1>
+            Hidup Sehat, Mulai dari Segelas Ramuraga Kombucha!
+          </h1>
+          <p>
+            Dapatkan diskon hingga 10% untuk pembelian 2 botol dan gratis 1 botol Leci untuk pembelian 5 botol!
+          </p>
+        </article>
+
+        <img src="https://i.pinimg.com/564x/49/57/6a/49576ac8b5aad21b6130239bc037b3f1.jpg" alt="Banner promosi">
+      </section>
+
+      
+      <section class="form">
+        <h1 class="heading">Isi form ini untuk pemesanan</h1>
+
+        <form class="name-whatsapp-wrapper">
+          <div class="input" aria-label="input">
+            <label for="nama" class="label">
+              Nama
+            </label>
+
+            <input id="nama" name="nama" type="text" class="placeholder" placeholder="Celia Aulia">
+
+          </div>
+
+          <div class="input" aria-label="input">
+            <label for="whatsapp" class="label">
+              No Whatsapp
+            </label>
+
+            <input id="whatsapp" name="whatsapp" type="text" class="placeholder" placeholder="08984131278">
+
+          </div>
+        </form>
+
+        <button id="order-button" class="button">
+          Pesan Sekarang
+        </button>
+      </section>
+
+    </div>
+  </body>
+
+  <script>
+    const orderButton = document.getElementById("order-button");
+
+    orderButton.addEventListener("click", () => {
+      const nama = document.getElementById("nama").value;
+      const whatsapp = document.getElementById("whatsapp").value;
+      
+      window.location.href = `https://web.whatsapp.com/send?phone=B6281211953815&text=Halo%20Ramuraga%2C%20saya%20${nama}%20mau%20pesan%20Kombucha%20yang%20lagi%20promo.%0A%0ANama%20%3A%20${nama}%0ANo%20HP%20%3A%20%20${whatsapp}%0AAlamat%20%3A%20%0AKecamatan%20%3A%20%0AKota%20%3A`;
+    });
+  </script>
+</html>
